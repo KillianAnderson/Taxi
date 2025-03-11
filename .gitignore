@@ -1,0 +1,7 @@
+venv/
+data/train.csv
+data/test.csv
+models/
+src/db/__pycache__/
+src/services/__pycache__/
+data.db

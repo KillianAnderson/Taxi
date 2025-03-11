@@ -1,0 +1,6 @@
+paths:
+  dataset_url: "https://github.com/eishkina-estia/ML2023/raw/main/data/New_York_City_Taxi_Trip_Duration.zip"
+  db_path: "./data.db"
+
+ml:
+  random_state: 42
