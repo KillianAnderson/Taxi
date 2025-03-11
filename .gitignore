@@ -4,4 +4,4 @@ data/test.csv
 models/
 src/db/__pycache__/
 src/services/__pycache__/
-data.db
+data.dbdata.db
