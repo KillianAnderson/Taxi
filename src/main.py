@@ -2,6 +2,8 @@ from db.stock_data import download_and_load_data
 from db.database import save_to_db
 from db.check_database import check_database
 from db.load_data import load_data_from_db
+from services.train import train_model
+from services.evaluate import evaluate_model
 
 from services.data_preprocessing import clean_data, split_data
 
@@ -19,7 +21,14 @@ def main():
 
     X_train, X_test, y_train, y_test = split_data(df_clean)
 
-    print("C'est split ici ,,,,,")
+    print("C'est split ici")
+    
+    model, rmse = train_model(X_train, X_test, y_train, y_test)
+    print("Modèle entraîné ici")
+    print(f"RMSE: {rmse:.4f}")
+    
+    rmse_test = evaluate_model(X_test, y_test)
+    print(f"Modèle évalué avec RMSE (test): {rmse_test:.4f}")
 
 if __name__ == "__main__":
     main()
