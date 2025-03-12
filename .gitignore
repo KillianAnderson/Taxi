@@ -4,4 +4,7 @@ data/test.csv
 models/
 src/db/__pycache__/
 src/services/__pycache__/
-data.dbdata.db
+data.db
+*.log
+*.sqlite3
+
