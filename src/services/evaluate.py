@@ -8,6 +8,6 @@ def evaluate_model(X_test, y_test):
     y_pred = model.predict(X_test)
 
     rmse = mean_squared_error(y_test, y_pred, squared=False)
-    print(f"📊 RMSE sur les données de test : {rmse:.4f}")
+    print(f"RMSE sur test {rmse:.4f}")
 
     return rmse
